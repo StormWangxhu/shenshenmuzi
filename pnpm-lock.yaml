@@ -759,6 +759,8 @@ importers:
     specifiers:
       '@types/katex': 0.14.0
       '@vuepress/client': 2.0.0-beta.51
+      '@vuepress/plugin-docsearch': 2.0.0-beta.51
+      '@vuepress/plugin-search': 2.0.0-beta.51
       '@vuepress/utils': 2.0.0-beta.51
       axios: 0.27.2
       docs-shared: workspace:*
@@ -782,6 +784,9 @@ importers:
       vuepress-theme-hope: link:../../packages/theme
       vuepress-vite: 2.0.0-beta.51_rwbafjiqatlpkdwd3bdql3o5j4
       vuepress-webpack: 2.0.0-beta.51_vue@3.2.39
+    devDependencies:
+      '@vuepress/plugin-docsearch': 2.0.0-beta.51
+      '@vuepress/plugin-search': 2.0.0-beta.51
 
   packages/blog2:
     specifiers:
@@ -3899,6 +3904,20 @@ packages:
       workbox-build: 6.5.4
     transitivePeerDependencies:
       - '@types/babel__core'
+      - supports-color
+    dev: true
+
+  /@vuepress/plugin-search/2.0.0-beta.51:
+    resolution: {integrity: sha512-LUKD1WOhesfbjRmy+3wPz27ZOat5sEL7nRVFrmoZNGjqGoUSuh/AFnd04z2utVEoceeuWWOluVmpoYKhxJVMFQ==}
+    dependencies:
+      '@vuepress/client': 2.0.0-beta.51
+      '@vuepress/core': 2.0.0-beta.51
+      '@vuepress/shared': 2.0.0-beta.51
+      '@vuepress/utils': 2.0.0-beta.51
+      chokidar: 3.5.3
+      vue: 3.2.39
+      vue-router: 4.1.5_vue@3.2.39
+    transitivePeerDependencies:
       - supports-color
     dev: true
 

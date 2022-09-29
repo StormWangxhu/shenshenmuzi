@@ -1,5 +1,7 @@
 import { getDirname, path } from "@vuepress/utils";
+import { searchPlugin } from "@vuepress/plugin-search";
 import { config } from "docs-shared";
+import { hopeTheme } from "vuepress-theme-hope";
 import theme from "./theme.js";
 
 const __dirname = getDirname(import.meta.url);
@@ -25,17 +27,25 @@ export default config(
       },
       "/zh/": {
         lang: "zh-CN",
-        title: "vuepress-theme-hope",
-        description: "一个具有强大功能的 vuepress 主题✨",
+        title: "我们",
+        description: "专注于学习、分享、交流",
       },
-      "/ru/": {
-        lang: "ru-RU",
-        title: "vuepress-theme-hope",
-        description: "Тема vuepress с множеством функций✨",
-      },
+      // "/ru/": {
+      //   lang: "ru-RU",
+      //   title: "vuepress-theme-hope",
+      //   description: "Тема vuepress с множеством функций✨",
+      // },
     },
 
     theme,
+    // theme: hopeTheme({
+    //   encrypt: {
+    //     config: {
+    //       // 这会加密整个 guide 目录，并且两个密码都是可用的
+    //       "zh/article/prophet-civilization-history/": ["1234", "5678"],
+    //     },
+    //   },
+    // }),
 
     pagePatterns: [
       "**/*.md",

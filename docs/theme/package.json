@@ -30,5 +30,9 @@
     "vuepress-theme-hope": "workspace:*",
     "vuepress-vite": "2.0.0-beta.51",
     "vuepress-webpack": "2.0.0-beta.51"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-docsearch": "2.0.0-beta.51",
+    "@vuepress/plugin-search": "2.0.0-beta.51"
   }
 }

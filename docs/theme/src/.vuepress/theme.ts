@@ -17,26 +17,45 @@ export default hopeTheme({
   hostname,
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mrhope.site",
+    name: "春秋",
+    url: "https://github.com/StormWangxhu",
   },
 
   iconAssets: "iconfont",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "StormWangxhu/vuepress-theme-hope",
 
   docsDir: "docs/theme/src",
 
-  logo: "/logo.svg",
+  logo: "logo.png",
 
-  footer: "MIT Licensed | Copyright © 2019-present Mr.Hope",
+  footer: "Copyright © 2022-present 莘莘穆子",
   copyright: false,
   displayFooter: true,
 
-  pageInfo: ["Category", "Tag", "ReadingTime"],
+  pageInfo: [
+    "Original",
+    "Author",
+    "Date",
+    "Category",
+    "Tag",
+    "PageView",
+    "ReadingTime",
+    "Word",
+  ],
+
+  // 标题渲染深度。
+  headerDepth: 4,
+
+  // 是否显示最后更新时间
+  lastUpdated: true,
+  // 是否显示贡献者。
+  contributors: true,
+  // 设置是否显示返回顶部按钮
+  backToTop: true,
 
   blog: {
-    name: "VuePress Theme Hope",
+    name: "我们",
   },
 
   themeColor: {
@@ -48,22 +67,26 @@ export default hopeTheme({
   fullscreen: true,
 
   locales: {
+    // "/": {
+    //   navbar: enNavbarConfig,
+    //   sidebar: enSidebarConfig,
+    // },
     "/": {
-      navbar: enNavbarConfig,
-      sidebar: enSidebarConfig,
+      navbar: zhNavbarConfig,
+      sidebar: zhSidebarConfig,
     },
     "/zh/": {
       navbar: zhNavbarConfig,
       sidebar: zhSidebarConfig,
     },
-    "/ru/": {
-      navbar: ruNavbarConfig,
-      sidebar: ruSidebarConfig,
-    },
+    // "/ru/": {
+    //   navbar: ruNavbarConfig,
+    //   sidebar: ruSidebarConfig,
+    // },
   },
 
   plugins: {
-    blog: true,
+    blog: false,
 
     components: ["Badge", "CodePen", "PDF", "StackBlitz", "YouTube"],
 

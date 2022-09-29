@@ -2,19 +2,16 @@
 home: true
 title: 主页
 icon: home
-heroImage: /logo.svg
-heroText: vuepress-theme-hope
-tagline: 一个具有强大功能的 vuepress 主题✨
+heroImage: /image/logo.png
+heroText: 莘莘穆子
+tagline: 专注于学习、分享、交流✨
 actions:
-  - text: 快速上手 💡
-    link: /zh/guide/
+  - text: 查看内容 💡
+    link: /zh/article/
     type: primary
 
-  - text: 配置 🛠
-    link: /zh/config/
-
-  - text: 在线案例 🪀
-    link: https://stackblitz.com/fork/vuepress-theme-hope
+  - text: 关于
+    link: /zh/about
 
 features:
   - title: Markdown 增强
@@ -22,30 +19,30 @@ features:
     details: 新增文字对齐、上下角标、脚注、标记、任务列表、数学公式、流程图、图表与幻灯片支持
     link: /zh/guide/markdown/
 
-  - title: 幻灯片页面
-    icon: slides
-    details: 添加幻灯片页面以显示你喜欢的内容
-    link: /zh/guide/layout/slides
+  # - title: 幻灯片页面
+  #   icon: slides
+  #   details: 添加幻灯片页面以显示你喜欢的内容
+  #   link: /zh/guide/layout/slides
 
-  - title: 布局增强
-    icon: layout
-    details: 添加路径导航、页脚、改进的导航栏、改进的页面导航等。
-    link: /zh/guide/layout/
+  # - title: 布局增强
+  #   icon: layout
+  #   details: 添加路径导航、页脚、改进的导航栏、改进的页面导航等。
+  #   link: /zh/guide/layout/
 
-  - title: 浏览量与评论
-    icon: comment
-    details: 配合 Waline 来开启阅读量统计与评论支持
-    link: /zh/guide/feature/comment.html
+  # - title: 浏览量与评论
+  #   icon: comment
+  #   details: 配合 Waline 来开启阅读量统计与评论支持
+  #   link: /zh/guide/feature/comment.html
 
   - title: 文章信息
     icon: info
     details: 为你的文章添加作者、写作日期、预计阅读时间、字数统计等信息
     link: /zh/guide/feature/page-info.html
 
-  - title: 博客支持
-    icon: blog
-    details: 使用一些很棒的布局提供博客功能，通过文章的日期、标签和分类，自动生成文章、分类、标签与时间轴列表
-    link: /zh/guide/blog/intro.html
+  # - title: 博客支持
+  #   icon: blog
+  #   details: 使用一些很棒的布局提供博客功能，通过文章的日期、标签和分类，自动生成文章、分类、标签与时间轴列表
+  #   link: /zh/guide/blog/intro.html
 
   - title: 主题色切换
     icon: palette
@@ -67,10 +64,10 @@ features:
     details: 你可以为你的特定页面或特定目录进行加密，以便陌生人不能随意访问它们
     link: /zh/guide/feature/encrypt.html
 
-  - title: 复制按钮
-    icon: copy
-    details: 一键复制代码块中的代码
-    link: /zh/guide/feature/copy-code.html
+  # - title: 复制按钮
+  #   icon: copy
+  #   details: 一键复制代码块中的代码
+  #   link: /zh/guide/feature/copy-code.html
 
   - title: 图片预览
     icon: pic
@@ -103,10 +100,10 @@ features:
     link: /zh/guide/feature/
 
 copyright: false
-footer: MIT Licensed | Copyright © 2019-present Mr.Hope
+footer: Copyright © 2022-present 莘莘穆子
 ---
 
-## 🛠 安装
+<!-- ## 🛠 安装
 
 在当前项目的 `[dir]` 文件夹内创建 vuepress-theme-hope 项目:
 
@@ -124,9 +121,9 @@ pnpm create vuepress-theme-hope@next [dir]
 npm init vuepress-theme-hope@next [dir]
 ```
 
-:::
+::: -->
 
-## 🚀 使用
+<!-- ## 🚀 使用
 
 ::: code-tabs#language
 
@@ -146,9 +143,9 @@ export default defineUserConfig({
     // ...
   }),
 });
-```
+``` -->
 
-@tab JS
+<!-- @tab JS
 
 ```js
 // .vuepress/config.js
@@ -165,20 +162,22 @@ export default {
 };
 ```
 
-:::
+::: -->
 
-## 使用教程
+<!-- ## 使用教程
 
-- [详细小白教程](cookbook/tutorial/README.md)
+- [详细小白教程](cookbook/tutorial/README.md) -->
 
-## 官方 QQ 群
+## 联系
 
-- [点击加入](https://jq.qq.com/?_wv=1027&k=rATJyxGK) (群号: 1003437555)
+- [邮箱](stormwangxhu@163.com)
+
+- [Github](https://github.com/StormWangxhu/)
 
 <!-- markdownlint-disable -->
 
-<NetlifyBadge alt="通过 Netlify 部署" />
+<!-- <NetlifyBadge alt="通过 Netlify 部署" />
 
 <script setup lang="ts">
 import NetlifyBadge from "@NetlifyBadge";
-</script>
+</script> -->
