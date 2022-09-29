@@ -15,7 +15,8 @@
     "docs:vite-dev": "vuepress-vite dev src",
     "docs:webpack-build": "vuepress-webpack build src",
     "docs:webpack-clean-dev": "vuepress-webpack dev src --clean-cache",
-    "docs:webpack-dev": "vuepress-webpack dev src"
+    "docs:webpack-dev": "vuepress-webpack dev src",
+    "fix-memory-limit": "cross-env LIMIT=4096 increase-memory-limit"
   },
   "dependencies": {
     "@types/katex": "0.14.0",
