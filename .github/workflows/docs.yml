@@ -1,18 +1,27 @@
+# Github Action，是其推出的持续集成工具
 name: Deploy Docs
 
+# 定义事件
 on:
   push:
+    # 指定触发事件时，可以限定分支或标签,只有feature/support_deploy分支发生push事件时，才会触发 workflow。
     branches:
-      - main
-      - work
+      - feature/support_deploy
 
+# 定义运行的jobs
 jobs:
   deploy-gh-pages:
     name: Deploy V2 docs to gh pages
+    # 指定运行 job 的运行环境
     runs-on: ubuntu-latest
+    # 定义 job 的运行步骤
     steps:
+      # 定义 step 的名称
       - name: Checkout
+        # @v3 是版本号
+        # uses: actions/checkout@v3
         uses: actions/checkout@v3
+        # with 控制传输执行命令的参数
         with:
           fetch-depth: 0
 
@@ -29,20 +38,23 @@ jobs:
           cache: pnpm
 
       - name: Build project
+        # 定义 step 的环境变量
         env:
           NODE_OPTIONS: --max_old_space_size=8192
+        # run 运行命令 单行命令
         run: pnpm run build
 
       - name: Docs build
         env:
-          BASE: /v2/
-          HOSTNAME: https://vuepress-theme-hope.github.io/
+          BASE: /
+          HOSTNAME: https://stormwangxhu.github.io/shenshenmuzi/
           NODE_OPTIONS: --max_old_space_size=8192
         run: pnpm run docs:vite-build
 
       - name: Combine output
+        #运行指令，多行命令：输出环境变量，cpx 提供的复制与文件监听命令，将其他格式的文件从源文件拷贝到输出目录
         run: |
-          pnpm cpx "docs/blog2/dist/**" dist/blog
+          pnpm cpx "docs/blog2/dist/**" dist/blog 
           pnpm cpx "docs/comment2/dist/**" dist/comment
           pnpm cpx "docs/components/dist/**" dist/components
           pnpm cpx "docs/copy-code2/dist/**" dist/copy-code
@@ -63,7 +75,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          repository-name: vuepress-theme-hope/v2
+          repository-name: shenshenmuzi
           branch: gh-pages
           folder: dist
           token: ${{ secrets.ACCESS_TOKEN }}
