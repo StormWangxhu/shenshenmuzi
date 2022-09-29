@@ -75,7 +75,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          repository-name: shenshenmuzi
+          repository-name: StormWangxhu/shenshenmuzi
           branch: gh-pages
           folder: dist
           token: ${{ secrets.ACCESS_TOKEN }}
