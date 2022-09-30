@@ -72,11 +72,15 @@ jobs:
           pnpm cpx "docs/theme/dist/**" dist
           > dist/.nojekyll
 
+      - name: Update git remote
+        run: git remote set-url origin https://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@github.com/StormWangxhu/shenshenmuzi.git
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           repository-name: StormWangxhu/shenshenmuzi
           branch: gh-pages
           folder: dist
+          # 将生成的秘钥以ACCESS_TOKEN存储到Secrets，同时公钥存储到SSH keys中
           token: ${{ secrets.ACCESS_TOKEN }}
           single-commit: true
