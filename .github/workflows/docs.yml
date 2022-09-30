@@ -35,7 +35,7 @@ jobs:
       - name: Docs build
         env:
           BASE: /
-          HOSTNAME: https://stormwangxhu.github.io/shenshenmuzi/
+          HOSTNAME: https://stormwangxhu.github.io/
           NODE_OPTIONS: --max_old_space_size=8192
         run: pnpm run docs:vite-build
 
@@ -62,7 +62,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          repository-name: StormWangxhu/shenshenmuzi
+          repository-name: StormWangxhu/shenshenmuzi-release
           branch: gh-pages
           folder: dist
           token: ${{ secrets.ACCESS_TOKEN }}
