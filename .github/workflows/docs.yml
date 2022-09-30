@@ -4,11 +4,10 @@ on:
   push:
     branches:
       - main
-      - work
 
 jobs:
   deploy-gh-pages:
-    name: Deploy V2 docs to gh pages
+    name: Deploy shenshenmuzi docs to gh pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -35,8 +34,8 @@ jobs:
 
       - name: Docs build
         env:
-          BASE: /v2/
-          HOSTNAME: https://vuepress-theme-hope.github.io/
+          BASE: /
+          HOSTNAME: https://stormwangxhu.github.io/shenshenmuzi/
           NODE_OPTIONS: --max_old_space_size=8192
         run: pnpm run docs:vite-build
 
@@ -63,7 +62,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          repository-name: vuepress-theme-hope/v2
+          repository-name: StormWangxhu/shenshenmuzi
           branch: gh-pages
           folder: dist
           token: ${{ secrets.ACCESS_TOKEN }}
