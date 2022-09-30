@@ -60,7 +60,11 @@ jobs:
       #          > dist/.nojekyll
 
       - name: Git test
-        run: git --version
+        run: |
+          git --version
+          pwd
+          git branch
+
 #      - name: Deploy
 #        uses: JamesIves/github-pages-deploy-action@v4
 #        with:
