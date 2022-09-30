@@ -1,17 +1,27 @@
-name: Deploy Docs
+# Github Action，是其推出的持续集成工具
+name: Deploy shenshenmuzi to Github Pages
 
+# 定义事件
 on:
   push:
+    # 指定触发事件时，可以限定分支或标签,只有feature/support_deploy分支发生push事件时，才会触发 workflow。
     branches:
       - main
 
+# 定义运行的jobs
 jobs:
   deploy-gh-pages:
-    name: Deploy shenshenmuzi docs to gh pages
+    name: Deploy shenshenmuzi docs to Github Pages
+    # 指定运行 job 的运行环境
     runs-on: ubuntu-latest
+    # 定义 job 的运行步骤
     steps:
+      # 定义 step 的名称
       - name: Checkout
+        # @v3 是版本号
+        # uses: actions/checkout@v3
         uses: actions/checkout@v3
+        # with 控制传输执行命令的参数
         with:
           fetch-depth: 0
 
@@ -27,49 +37,75 @@ jobs:
           node-version: 16
           cache: pnpm
 
-      #      - name: Build project
-      #        env:
-      #          NODE_OPTIONS: --max_old_space_size=8192
-      #        run: pnpm run build
-      #
-      #      - name: Docs build
-      #        env:
-      #          BASE: /
-      #          HOSTNAME: https://stormwangxhu.github.io/
-      #          NODE_OPTIONS: --max_old_space_size=8192
-      #        run: pnpm run docs:vite-build
-      #
-      #      - name: Combine output
-      #        run: |
-      #          pnpm cpx "docs/blog2/dist/**" dist/blog
-      #          pnpm cpx "docs/comment2/dist/**" dist/comment
-      #          pnpm cpx "docs/components/dist/**" dist/components
-      #          pnpm cpx "docs/copy-code2/dist/**" dist/copy-code
-      #          pnpm cpx "docs/copyright2/dist/**" dist/copyright
-      #          pnpm cpx "docs/feed2/dist/**" dist/feed
-      #          pnpm cpx "docs/lightgallery/dist/**" dist/lightgallery
-      #          pnpm cpx "docs/md-enhance/dist/**" dist/md-enhance
-      #          pnpm cpx "docs/photo-swipe/dist/**" dist/photo-swipe
-      #          pnpm cpx "docs/pwa2/dist/**" dist/pwa
-      #          pnpm cpx "docs/reading-time2/dist/**" dist/reading-time
-      #          pnpm cpx "docs/redirect/dist/**" dist/redirect
-      #          pnpm cpx "docs/sass-palette/dist/**" dist/sass-palette
-      #          pnpm cpx "docs/seo2/dist/**" dist/seo
-      #          pnpm cpx "docs/sitemap2/dist/**" dist/sitemap
-      #          pnpm cpx "docs/theme/dist/**" dist
-      #          > dist/.nojekyll
+      - name: Build project
+        # 定义 step 的环境变量
+        env:
+          NODE_OPTIONS: --max_old_space_size=8192
+        # run 运行命令 单行命令
+        run: pnpm run build
 
-      - name: Git test
+      - name: Docs build
+        env:
+          BASE: /
+          HOSTNAME: https://stormwangxhu.github.io/shenshenmuzi/
+          NODE_OPTIONS: --max_old_space_size=8192
+        run: pnpm run docs:vite-build
+
+      - name: Combine output
+        #运行指令，多行命令：输出环境变量，cpx 提供的复制与文件监听命令，将其他格式的文件从源文件拷贝到输出目录
         run: |
-          git --version
+          pnpm cpx "docs/blog2/dist/**" dist/blog
+          pnpm cpx "docs/comment2/dist/**" dist/comment
+          pnpm cpx "docs/components/dist/**" dist/components
+          pnpm cpx "docs/copy-code2/dist/**" dist/copy-code
+          pnpm cpx "docs/copyright2/dist/**" dist/copyright
+          pnpm cpx "docs/feed2/dist/**" dist/feed
+          pnpm cpx "docs/lightgallery/dist/**" dist/lightgallery
+          pnpm cpx "docs/md-enhance/dist/**" dist/md-enhance
+          pnpm cpx "docs/photo-swipe/dist/**" dist/photo-swipe
+          pnpm cpx "docs/pwa2/dist/**" dist/pwa
+          pnpm cpx "docs/reading-time2/dist/**" dist/reading-time
+          pnpm cpx "docs/redirect/dist/**" dist/redirect
+          pnpm cpx "docs/sass-palette/dist/**" dist/sass-palette
+          pnpm cpx "docs/seo2/dist/**" dist/seo
+          pnpm cpx "docs/sitemap2/dist/**" dist/sitemap
+          pnpm cpx "docs/theme/dist/**" dist
+          > dist/.nojekyll
+
+      - name: Git setting
+        run: |
           pwd
-          git branch
+          git status
+          cd dist
+          git add -A
+          git stash
+          echo "git stash success"
+          git status
+          git checkout -b gh-pages
+          echo "checkout -b gh-pages success"
+          echo "git stash list..."
+          git stash list
+          echo "git stash pop..."
+          git stash pop
+          echo "git commit ..."
+          git commit -m "first commit"
+          git config user.name "StormWangxhu"
+          git config user.email "StormWangxhu@163.com"
+          echo "set user.name/email success"
+          echo "Starting push"
+          git remote set-url origin https://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@github.com/StormWangxhu/shenshenmuzi.git
+          git push --set-upstream origin gh-pages
+          echo "Pushed successed!"
 
 #      - name: Deploy
 #        uses: JamesIves/github-pages-deploy-action@v4
 #        with:
-#          repository-name: StormWangxhu/shenshenmuzi-release
+#          repository-name: StormWangxhu/shenshenmuzi
 #          branch: gh-pages
+#          # The folder the action should deploy.
 #          folder: dist
+#          # 将生成的秘钥以ACCESS_TOKEN存储到Secrets，同时公钥存储到SSH keys中
 #          token: ${{ secrets.ACCESS_TOKEN }}
 #          single-commit: true
+#          clean: true
+#          force: true
