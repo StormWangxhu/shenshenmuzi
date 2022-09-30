@@ -1,17 +1,17 @@
 # Github Action，是其推出的持续集成工具
-name: Deploy Docs
+name: Deploy shenshenmuzi to Github Pages
 
 # 定义事件
 on:
   push:
     # 指定触发事件时，可以限定分支或标签,只有feature/support_deploy分支发生push事件时，才会触发 workflow。
     branches:
-      - feature/support_deploy
+      - main
 
 # 定义运行的jobs
 jobs:
   deploy-gh-pages:
-    name: Deploy V2 docs to gh pages
+    name: Deploy shenshenmuzi docs to Github Pages
     # 指定运行 job 的运行环境
     runs-on: ubuntu-latest
     # 定义 job 的运行步骤
@@ -72,15 +72,15 @@ jobs:
           pnpm cpx "docs/theme/dist/**" dist
           > dist/.nojekyll
 
-      - name: Update git remote
-        run: git remote set-url origin https://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@github.com/StormWangxhu/shenshenmuzi.git
-
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           repository-name: StormWangxhu/shenshenmuzi
           branch: gh-pages
+          # The folder the action should deploy.
           folder: dist
           # 将生成的秘钥以ACCESS_TOKEN存储到Secrets，同时公钥存储到SSH keys中
           token: ${{ secrets.ACCESS_TOKEN }}
           single-commit: true
+          clean: true
+          force: true
