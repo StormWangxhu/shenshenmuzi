@@ -17,6 +17,7 @@
     "copy": "pnpm run --parallel -r copy",
     "dev": "concurrently \"tsc -b tsconfig.build.json --watch\" \"pnpm run dev:copy\"",
     "dev:copy": "pnpm run --parallel -r dev:copy",
+    "docs:set-node-mem": "cross-env LIMIT=4096 increase-memory-limit",
     "docs:vite-build": "pnpm run -r docs:vite-build",
     "docs:webpack-build": "pnpm run -r docs:vite-build",
     "postinstall": "husky install",
