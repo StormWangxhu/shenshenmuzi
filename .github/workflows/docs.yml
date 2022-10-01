@@ -6,7 +6,7 @@ on:
   push:
     # 指定触发事件时，可以限定分支或标签,只有feature/support_deploy分支发生push事件时，才会触发 workflow。
     branches:
-      - main
+      - feature/support_deploy
 
 # 定义运行的jobs
 jobs:
@@ -46,8 +46,8 @@ jobs:
 
       - name: Docs build
         env:
-          BASE: /
-          HOSTNAME: https://stormwangxhu.github.io/shenshenmuzi/
+          BASE: /shenshenmuzi/
+          HOSTNAME: https://stormwangxhu.github.io/
           NODE_OPTIONS: --max_old_space_size=8192
         run: pnpm run docs:vite-build
 
@@ -77,10 +77,7 @@ jobs:
         with:
           repository-name: StormWangxhu/shenshenmuzi
           branch: gh-pages
-          # The folder the action should deploy.
           folder: dist
-          # 将生成的秘钥以ACCESS_TOKEN存储到Secrets，同时公钥存储到SSH keys中
-          token: ${{ secrets.ACCESS_TOKEN }}
           single-commit: true
           clean: true
           force: true
