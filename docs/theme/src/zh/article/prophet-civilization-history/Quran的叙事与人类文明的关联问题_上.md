@@ -16,6 +16,18 @@ timeline: true
 
 《Quran》：作为声音文字的经典
 
+## 分享大纲
+
+<iframe
+:src="$withBase('/markmap/prophet-civilization-history/Quran的叙事与人类文明的关联问题_上.html')"
+width="100%"
+height="400"
+frameborder="0"
+scrolling="No"
+leftmargin="0"
+topmargin="0"
+/>
+
 ## 框架再现
 
 ### 先知文明史的整体思路分为三部分
