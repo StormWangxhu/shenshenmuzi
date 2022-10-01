@@ -3,6 +3,7 @@
   "version": "2.0.0-beta.104",
   "private": true,
   "description": "A vuepress theme with tons of features",
+  "homepage": "https://stormwangxhu.github.io/shenshenmuzi-release",
   "type": "module",
   "workspaces": [
     "demo/*",
