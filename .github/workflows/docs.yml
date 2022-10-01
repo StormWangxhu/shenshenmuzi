@@ -75,7 +75,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          repository-name: StormWangxhu/shenshenmuzi-release
+          repository-name: StormWangxhu/shenshenmuzi
           branch: gh-pages
           folder: dist
           # 将生成的秘钥以ACCESS_TOKEN存储到Secrets，同时公钥存储到SSH keys中
