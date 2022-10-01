@@ -72,13 +72,6 @@ jobs:
           pnpm cpx "docs/theme/dist/**" dist
           > dist/.nojekyll
 
-      - name: Git setting
-        run: |
-          pwd
-          git status
-          cd dist
-          ll
-
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
@@ -87,5 +80,5 @@ jobs:
           # The folder the action should deploy.
           folder: dist
           # 将生成的秘钥以ACCESS_TOKEN存储到Secrets，同时公钥存储到SSH keys中
-          token: ${{ secrets.ACCESS_TOKEN }}
+          #          token: ${{ secrets.ACCESS_TOKEN }}
           single-commit: true
