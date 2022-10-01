@@ -1,0 +1,1 @@
+import{_ as o}from"./_plugin-vue_export-helper.cdc0426e.js";import{o as c,c as t,g as e}from"./app.814dec7b.js";const n={};function r(a,l){return c(),t("div",null,[e(" more "),e(" @include(../../../CHANGELOG.md{5-}) ")])}const s=o(n,[["render",r],["__file","changelog.html.vue"]]);export{s as default};

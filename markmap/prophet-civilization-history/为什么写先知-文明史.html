@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.14.3/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.14.3"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.14.3/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
+        const markmap = getMarkmap();
+        window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
+      })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[1,2]},"content":"为什么要写先知-文明史","children":[{"type":"heading","depth":1,"payload":{"lines":[3,4]},"content":"先知-文明史整体思路","children":[{"type":"list_item","depth":2,"payload":{"lines":[7,8]},"content":"第一部分：问题与方法；"},{"type":"list_item","depth":2,"payload":{"lines":[8,9]},"content":"第二部分：理论要素与框架；"},{"type":"list_item","depth":2,"payload":{"lines":[9,10]},"content":"第三部分：先知文明史的六个阶段（附加现代，我们称之为弥赛亚时代）"}]},{"type":"heading","depth":1,"payload":{"lines":[11,12]},"content":"第一部分：问题与方法","children":[{"type":"bullet_list","depth":2,"payload":{"lines":[14,19]},"content":"","children":[{"type":"list_item","depth":3,"payload":{"lines":[14,15]},"content":"一、写作先知-文明史的背景"},{"type":"list_item","depth":3,"payload":{"lines":[15,16]},"content":"二、《古热阿尼》叙事与人类文明的关联问题"},{"type":"list_item","depth":3,"payload":{"lines":[16,17]},"content":"三、先知文明史观"},{"type":"list_item","depth":3,"payload":{"lines":[17,18]},"content":"四、引证的材料问题与方法"}]},{"type":"heading","depth":2,"payload":{"lines":[19,20]},"content":"一、写作先知-文明史的背景"}]},{"type":"heading","depth":1,"payload":{"lines":[36,37]},"content":"正文","children":[{"type":"heading","depth":2,"payload":{"lines":[38,39]},"content":"前言"},{"type":"heading","depth":2,"payload":{"lines":[62,63]},"content":"写作先知-文明史的背景/原因","children":[{"type":"heading","depth":3,"payload":{"lines":[68,69]},"content":"原因一 个人对古热阿尼本身的思考"},{"type":"heading","depth":3,"payload":{"lines":[80,81]},"content":"原因二 三星堆考古发现/《鹰蛇之夏》"},{"type":"heading","depth":3,"payload":{"lines":[95,96]},"content":"原因三 西方历史终结论、文明冲突论与天启宗教末世论的关联"}]},{"type":"heading","depth":2,"payload":{"lines":[132,133]},"content":"结语"}]}]},{})</script>
+</body>
+</html>
