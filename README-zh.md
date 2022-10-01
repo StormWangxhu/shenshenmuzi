@@ -1,8 +1,8 @@
 <!-- markdownlint-disable -->
 <p align="center">
-  <img width="240" src="https://vuepress-theme-hope.github.io/v2/logo.svg" style="text-align: center;">
+  <img width="240" src="https://github.com/StormWangxhu/shenshenmuzi/blob/gh-pages/logo.png" style="text-align: center;">
 </p>
-<h1 align="center">vuepress-theme-hope</h1>
+<h1 align="center">shenshenmuzi</h1>
 <h4 align="center">一个具有强大功能的 vuepress 主题✨</h4>
 
 [![Author: Mr.Hope](https://img.shields.io/badge/作者-Mr.Hope-blue.svg?style=for-the-badge)](https://mrhope.site)

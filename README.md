@@ -1,9 +1,9 @@
 <!-- markdownlint-disable -->
 <p align="center">
-  <img width="240" src="https://vuepress-theme-hope.github.io/v2/logo.svg" style="text-align: center;">
+  <img width="240" src="https://github.com/StormWangxhu/shenshenmuzi/blob/gh-pages/logo.png" style="text-align: center;">
 </p>
-<h1 align="center">vuepress-theme-hope</h1>
-<h4 align="center">A vuepress theme with tons of features✨</h4>
+<h1 align="center">shenshenmuzi</h1>
+<h4 align="center">shenshenmuzi✨</h4>
 
 <h4 align="center">
 
