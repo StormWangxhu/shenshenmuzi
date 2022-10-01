@@ -2,12 +2,12 @@
   "name": "theme-docs",
   "version": "2.0.0-beta.104",
   "private": true,
-  "description": "Docs for vuepress-theme-hope",
+  "description": "Docs for shenshenmuzi",
   "license": "MIT",
   "author": {
-    "name": "Mr.Hope",
-    "email": "mister-hope@outlook.com",
-    "url": "https://mrhope.site"
+    "name": "StormWangxhu",
+    "email": "stormwangxhu@163.com",
+    "url": "https://stormwangxhu.github.io/shenshenmuzi"
   },
   "scripts": {
     "docs:vite-build": "vuepress-vite build src",
@@ -16,7 +16,7 @@
     "docs:webpack-build": "vuepress-webpack build src",
     "docs:webpack-clean-dev": "vuepress-webpack dev src --clean-cache",
     "docs:webpack-dev": "vuepress-webpack dev src",
-    "fix-memory-limit": "cross-env LIMIT=4096 increase-memory-limit"
+    "fix-memory-limit": "cross-env LIMIT=1024 increase-memory-limit"
   },
   "dependencies": {
     "@types/katex": "0.14.0",

@@ -1,11 +1,11 @@
 ---
 title: 书籍
 icon: advance
+date: 2022-09-29
+author: 春秋
 category:
-  - 教程知识
-  - 高级
-tag:
-  - 高级
+  - 书籍
+  - 先知-文明史
 article: false
 ---
 

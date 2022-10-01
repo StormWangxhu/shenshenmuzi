@@ -23,7 +23,7 @@ export default hopeTheme({
 
   iconAssets: "iconfont",
 
-  repo: "StormWangxhu/vuepress-theme-hope",
+//   repo: "StormWangxhu/shenshenmuzi",
 
   docsDir: "docs/theme/src",
 
@@ -243,8 +243,8 @@ export default hopeTheme({
     },
 
     seo:
-      hostname === "https://vuepress-theme-hope.github.io"
+      hostname === "https://stormwangxhu.github.io/shenshenmuzi"
         ? {}
-        : { canonical: "https://vuepress-theme-hope.github.io/v2/" },
+        : { canonical: "https://stormwangxhu.github.io/shenshenmuzi/" },
   },
 });

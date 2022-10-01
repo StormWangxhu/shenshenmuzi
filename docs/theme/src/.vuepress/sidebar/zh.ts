@@ -69,11 +69,15 @@ export const zhSidebarConfig = sidebar({
       icon: "vue",
       prefix: "prophet-civilization-history/",
       collapsable: true, // 开启可折叠
-      children: ["先知-文明史建群举意和宗旨", "为什么要写先知-文明史"],
+      children: [
+        "先知-文明史建群举意和宗旨",
+         "为什么要写先知-文明史",
+         "Quran的叙事与人类文明的关联问题_上"
+      ],
     },
     {
       text: "书籍",
-      icon: "vue",
+      icon: "book",
       prefix: "books/",
       collapsable: true,
       children: [

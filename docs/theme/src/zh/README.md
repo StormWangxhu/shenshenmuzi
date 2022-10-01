@@ -59,20 +59,29 @@ features:
     details: 为你的网站带来完整的无障碍支持
     link: /zh/guide/interface/accessibility.html
 
-  - title: 文章加密
-    icon: lock
-    details: 你可以为你的特定页面或特定目录进行加密，以便陌生人不能随意访问它们
-    link: /zh/guide/feature/encrypt.html
+[comment]: <> (  - title: 文章加密)
 
-  # - title: 复制按钮
-  #   icon: copy
-  #   details: 一键复制代码块中的代码
-  #   link: /zh/guide/feature/copy-code.html
+[comment]: <> (    icon: lock)
 
-  - title: 图片预览
-    icon: pic
-    details: 像相册一样允许你浏览、缩放并分享你的页面图片
-    link: /zh/guide/feature/photo-swipe.html
+[comment]: <> (    details: 你可以为你的特定页面或特定目录进行加密，以便陌生人不能随意访问它们)
+
+[comment]: <> (    link: /zh/guide/feature/encrypt.html)
+
+[comment]: <> (  # - title: 复制按钮)
+
+[comment]: <> (  #   icon: copy)
+
+[comment]: <> (  #   details: 一键复制代码块中的代码)
+
+[comment]: <> (  #   link: /zh/guide/feature/copy-code.html)
+
+[comment]: <> (  - title: 图片预览)
+
+[comment]: <> (    icon: pic)
+
+[comment]: <> (    details: 像相册一样允许你浏览、缩放并分享你的页面图片)
+
+[comment]: <> (    link: /zh/guide/feature/photo-swipe.html)
 
   # - title: SEO 增强
   #   icon: config
@@ -94,10 +103,13 @@ features:
   #   details: 让你的网站更像一个 APP
   #   link: /zh/guide/advanced/pwa.html
 
-  - title: 更多新特性
-    icon: more
-    details: 包括图标支持、全屏按钮、返回顶部按钮等
-    link: /zh/guide/feature/
+[comment]: <> (  - title: 更多新特性)
+
+[comment]: <> (    icon: more)
+
+[comment]: <> (    details: 包括图标支持、全屏按钮、返回顶部按钮等)
+
+[comment]: <> (    link: /zh/guide/feature/)
 
 copyright: false
 footer: Copyright © 2022-present 莘莘穆子
